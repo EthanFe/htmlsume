@@ -65,12 +65,21 @@ const HeaderText =  ({ children, style = {} }) => (
 
 const experience = [
   {
+    title: "Lead Full-Stack Developer",
+    company: "Zapxy",
+    period: "Feb 2025 – June 2025",
+    descriptions: [
+      "Developed from scratch and launched a webapp, backend and mobile app to launch a new local business marketing product.",
+      "Primarily used React, React Native & Node, with Postgres for persistence, with the website and backend hosted on Google Compute Engine.",
+    ],
+    skipCompany: false
+  },
+  {
     title: "Software Engineer",
     company: "Independent Consulting",
     period: "Aug 2023 – June 2025",
     descriptions: [
       "Worked on a contract basis for different companies in order to focus on composing music; among others:",
-      "Developed from scratch and launched a web view, backend and mobile app to launch a new local business marketing product, using React, React Native & Node.",
       "Created a prototype web view integrating with an existing music practice aid mobile app using React, using Firebase to support real-time features.",
     ],
     skipCompany: false
