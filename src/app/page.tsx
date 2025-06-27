@@ -67,7 +67,7 @@ const experience = [
   {
     title: "Lead Full-Stack Developer",
     company: "Zapxy",
-    period: "Feb 2025 – Present",
+    period: "Mar 2025 – Present",
     descriptions: [
       "Developed from scratch and launched a webapp, backend and mobile app to launch a new local business marketing product.",
       "Primarily used React, React Native & Node, with Postgres for persistence, with the website and backend hosted on Google Compute Engine.",
