@@ -67,7 +67,7 @@ const experience = [
   {
     title: "Lead Full-Stack Developer",
     company: "Zapxy",
-    period: "Feb 2025 – June 2025",
+    period: "Feb 2025 – Present",
     descriptions: [
       "Developed from scratch and launched a webapp, backend and mobile app to launch a new local business marketing product.",
       "Primarily used React, React Native & Node, with Postgres for persistence, with the website and backend hosted on Google Compute Engine.",
@@ -75,12 +75,15 @@ const experience = [
     skipCompany: false
   },
   {
-    title: "Software Engineer",
+    title: "Software Engineer / Music Composer",
     company: "Independent Consulting",
-    period: "Aug 2023 – June 2025",
+    period: "Aug 2023 – Present",
     descriptions: [
-      "Worked on a contract basis for different companies in order to focus on composing music; among others:",
+      // "Worked on a contract basis for various companies.",
+      // "Worked on a contract basis for different companies in order to allow flexibility to focus on composing music as well as organizing and leading orchestral musicians for rehearsals and performances.",
       "Created a prototype web view integrating with an existing music practice aid mobile app using React, using Firebase to support real-time features.",
+      "Served as a fractional CTO providing technical guidance for a startup making an educational app for kids.",
+      "Wrote, performed and directed original orchestral music with several different local ensembles."
     ],
     skipCompany: false
   },
@@ -93,7 +96,7 @@ const experience = [
       "Established devops infrastructure, building automated deployment and tests via Github. Set up Sentry, Highlight, and Slack integrations.",
       "Standardized and optimized company-wide API structures, authorization rules, data access and synchronization patterns for greater developer efficiency.",
       "Developed management tools and data visualizations for internal users using a combination of Amplitude, Retool and in-app admin features.",
-      "Worked with the design team to develop and iterate on a consistent design system and language for the product UI/UX.",
+      "Collaborated with the design team to develop and iterate on a consistent design system and language for the product UI/UX.",
       "Worked with the CTO to prioritize, design and implement growth initiatives.",
     ]
   },
@@ -114,7 +117,8 @@ const experience = [
     descriptions: [
       "Modernized client’s website and backend, while integrating 3rd-party web APIs and custom CMS to allow easy maintenance and extension of content.",
     ],
-    skipCompany: false
+    skipCompany: false,
+    pageBreak: true
   },
   {
     company: "Slalom Build",
@@ -163,7 +167,7 @@ export default function Home() {
             <HeaderText style={{ ...fancyBorder, paddingBottom: "4px" }}>Skills</HeaderText>
             <div style={{ ...flexColumn, gap: "2px" }}>
               <Text><strong>Languages</strong>: JavaScript/Typescript, C#, Python, Ruby, Lua, SQL, HTML/CSS</Text>
-              <Text><strong>Web Frameworks</strong>: React, Next.js, Redux, Express, Angular, .NET, Ruby on Rails</Text>
+              <Text><strong>Frameworks</strong>: React, React Native, Next.js, Redux, Express, Angular, .NET, Ruby on Rails</Text>
               <Text><strong>Other Tools</strong>: Socket.io, Postgres, MongoDB, AWS (SQS, Lambda functions), Docker</Text>
               <Text><strong>Integrations</strong>: Stripe, Google Calendar, Retool, Customer.io, Segment, Amplitude, Google Analytics, Twilio, Sentry, Fullstory, Highlight</Text>
             </div>
@@ -180,10 +184,10 @@ export default function Home() {
 }
 
 const ExperienceEntry = ({ info }) => {
-  const { company, title, period, descriptions, skipCompany = false } = info
+  const { company, title, period, descriptions, skipCompany = false, pageBreak = false } = info
 
   return (
-    <div style={{ ...flexColumn, gap: "4px" }}>
+    <div style={{ ...flexColumn, gap: "4px", breakAfter: pageBreak ? 'page' : undefined }}>
       <div>
         {!skipCompany ?
           (
