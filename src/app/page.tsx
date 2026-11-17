@@ -1,4 +1,5 @@
-import Image from "next/image"
+import { DancingPaypalButton } from "./DancingPaypalButton"
+import { experience } from "./experience"
 
 const flexColumn = { 
   display: "flex",
@@ -63,81 +64,6 @@ const HeaderText =  ({ children, style = {} }) => (
   <div style={{ fontSize: "14pt", fontFamily: "Raleway", fontWeight: "bold", ...style }}>{children}</div>
 )
 
-const experience = [
-  {
-    title: "Lead Full-Stack Developer",
-    company: "Zapxy",
-    period: "Mar 2025 – Present",
-    descriptions: [
-      "Developed from scratch and launched a webapp, backend and mobile app to launch a new local business marketing product.",
-      "Primarily used React, React Native & Node, with Postgres for persistence, with the website and backend hosted on Google Compute Engine.",
-    ],
-    skipCompany: false
-  },
-  {
-    title: "Software Engineer / Music Composer",
-    company: "Independent Consulting",
-    period: "Aug 2023 – Present",
-    descriptions: [
-      // "Worked on a contract basis for various companies.",
-      // "Worked on a contract basis for different companies in order to allow flexibility to focus on composing music as well as organizing and leading orchestral musicians for rehearsals and performances.",
-      "Created a prototype web view integrating with an existing music practice aid mobile app using React, using Firebase to support real-time features.",
-      "Served as a fractional CTO providing technical guidance for a startup making an educational app for kids.",
-      "Wrote, performed and directed original orchestral music with several different local ensembles."
-    ],
-    skipCompany: false
-  },
-  {
-    company: "Flow Club",
-    title: "Lead Full-Stack Developer",
-    period: "Jan 2022 – June 2023",
-    descriptions: [
-      "Led construction of the company’s frontend, using a React/serverless Node/Firestore stack hosted on Firebase.",
-      "Established devops infrastructure, building automated deployment and tests via Github. Set up Sentry, Highlight, and Slack integrations.",
-      "Standardized and optimized company-wide API structures, authorization rules, data access and synchronization patterns for greater developer efficiency.",
-      "Developed management tools and data visualizations for internal users using a combination of Amplitude, Retool and in-app admin features.",
-      "Collaborated with the design team to develop and iterate on a consistent design system and language for the product UI/UX.",
-      "Worked with the CTO to prioritize, design and implement growth initiatives.",
-    ]
-  },
-  {
-    company: "Formative Education",
-    title: "Lead Developer",
-    period: "June 2021 – Dec 2021",
-    descriptions: [
-      "Led a team of two other developers in creating an online tool which enables programming educators to easily write, present and provide real-time guidance to students in completing coding exercises.",
-      "Used React and our own custom-built Javascript (Node-based) framework for managing real-time data synchronization and display to multiple clients. Worked with Postgres for data persistence.",
-      "Created mechanisms for programming instructors to seamlessly teach and evaluate students in a variety of different contexts and languages, from React & JSX to Python (using WebAssembly).",
-    ]
-  },
-  {
-    company: "Independent Consulting",
-    title: "Software Engineer",
-    period: "April 2021 – June 2021",
-    descriptions: [
-      "Modernized client’s website and backend, while integrating 3rd-party web APIs and custom CMS to allow easy maintenance and extension of content.",
-    ],
-    skipCompany: false,
-    pageBreak: true
-  },
-  {
-    company: "Slalom Build",
-    title: "Software Engineer",
-    period: "July 2019 – April 2020",
-    descriptions: [
-      "Built and updated UIs and backend systems for a scalable billing and invoicing system, using .NET Core, Angular, MySQL and AWS Lambdas.",
-    ]
-  },
-  {
-    company: "Flatiron School",
-    title: "Software Engineering Coach",
-    period: "May 2019 – July 2019",
-    descriptions: [
-      "Instructed 40+ students in programming fundamentals and web development technologies, including Ruby on Rails, Express.js, Flask and React.",
-    ]
-  }
-]
-
 export default function Home() {
   return (
     <div style={styles.container}>
@@ -145,14 +71,6 @@ export default function Home() {
         <div style={styles.leftColumn}>
           <div style={{ position: 'relative' }}>
             <div style={styles.name}>Ethan Feinberg</div>
-            <div style={{ position: "absolute", right: 32, top: 6, borderRadius: '8px', overflow: 'clip' }}>
-              <Image
-                src="/myFinch.jpg"
-                width={50.4}
-                height={42}
-                alt="Picture of the author"
-              />
-            </div>
           </div>
           <Text style={{ fontWeight: "bold", fontSize: "11pt" }}>
             Github: <a style={{color: '#2424c9'}} href="https://github.com/EthanFe">EthanFe</a>
@@ -177,7 +95,7 @@ export default function Home() {
 
       <div style={styles.experience}>
         <HeaderText style={{ ...fancyBorder, paddingBottom: "4px" }}>Selected Experience</HeaderText>
-        {experience.map(experience => <ExperienceEntry info={experience} />)}
+        {experience.map(entry => <ExperienceEntry info={entry} />)}
       </div>
     </div>
   );
