@@ -1,12 +1,12 @@
 export const experience = [
   {
     title: "Lead Engineer",
-    company: "Karunaverse",
+    company: "Karunaverse (app.karunaverse.org)",
     period: "Mar - Aug 2026",
     descriptions: [
       "Updated technical infrastructure – revamped an existing webapp backend from a PHP self-hosted solution to Node cloud functions hosted on Vercel, updated the frontend (a game written using PixiJS) from vanilla JS to Typescript, and set up connections to other supporting cloud services (Supabase, Resend).",
       "Onboarded another developer to the project and assisted with feature development",
-      "Implemented some feature updates myself, idk what to describe about this"
+      "Feature updates and site stability"
     ],
     skipCompany: false
   },
@@ -17,6 +17,7 @@ export const experience = [
     descriptions: [
       "Developed from scratch and launched a webapp, backend and mobile app to launch a new local business marketing product.",
       "Primarily used React, React Native & Node, with Postgres for persistence, with the website and backend hosted on Google Compute Engine.",
+      "Zapxy app is currently live on Apple App Store"
     ],
     skipCompany: false
   },
