@@ -78,6 +78,7 @@ export default function Home() {
           <div>
             <Text style={{ fontSize: "8pt" }}>408-439-7836</Text>
             <Text style={{ fontSize: "8pt" }}>ethan.b.feinberg@gmail.com</Text>
+            <Text><a style={{color: '#2424c9'}} href="https://github.com/EthanFe/htmlsume">Resume source code</a></Text>
           </div>
         </div>
         <div style={styles.rightColumn}>
